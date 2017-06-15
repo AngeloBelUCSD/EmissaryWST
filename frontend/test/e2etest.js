@@ -39,7 +39,8 @@ test.before(function() {
     }
     else {
         driver = new webdriver.Builder().forBrowser('chrome').build();
-        site = 'http://localhost:3000/';
+        site = 'http://localhost:3000/'; // Was 4941
+
     }
 })
 
@@ -147,6 +148,7 @@ test.describe(("Pricing 2"), function() {
             .then(() => driver.findElement(By.xpath("//*[contains(text(), 'Pricing')]")).click())
             .then(() => driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div[2]/div[2]/div[1]/div[1]/div/div/div[1]/div/p")))
     });
+
 });
 
 test.describe(("Features 2"), function() {
